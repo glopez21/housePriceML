@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
+    
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <div class="register_page">
+        <div class="form">
+            <form action="{{url_for('predict')}}" method="POST"></form>
+                Bedrooms: <input type="number" name='bedrooms' placeholder="Enter the number of Bedrooms"><br>
+                Bathrooms: <input type="number" name='bathrooms' placeholder="Enter the number of bathrooms"><br>
+                Living_spc: <input type="number" name='living' placeholder="Enter the number of living"><br>
+                Floors: <input type="number" name='floors' placeholder="Enter the number of floors"><br>
+                <input type="submit" value="predict" class="submit">
+        </form>
+        <p> House Price is: {{data}}</p>
+
+    </div>
+    
+    
+</body>
+</html>
